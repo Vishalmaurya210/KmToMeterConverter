@@ -8,7 +8,7 @@ public class kmToMeterConverter extends JFrame  implements ActionListener {
     JButton b1, b2 , b3;
     JLabel l1, l2;
     JTextField t1, t2;
-    JPanel panel;
+    
 
     public kmToMeterConverter() {
         initComponents();
@@ -16,8 +16,10 @@ public class kmToMeterConverter extends JFrame  implements ActionListener {
     }
     public void initComponents() {
         setTitle("Unit converter");
+        setSize(400,400);
+        setLocationRelativeTo(null);
+        setLayout(null);
 
-        panel = new JPanel();
         b1 = new JButton("Converter");
         b2 = new JButton("Clear");
         b3 = new JButton("Quit");
@@ -29,11 +31,11 @@ public class kmToMeterConverter extends JFrame  implements ActionListener {
         t2 = new JTextField();
         t2.setEditable(false);
 
-        l1.setBounds(50, 50, 100, 30);
-        t1.setBounds(50, 50, 150, 30);
+        l1.setBounds(50, 50, 120, 30);
+        t1.setBounds(200, 50, 150, 30);
 
-        l2.setBounds(50, 50, 100, 30);
-        t2.setBounds(50, 50, 150, 30);
+        l2.setBounds(50, 100, 120, 30);
+        t2.setBounds(200, 100, 150, 30);
 
         b1.setBounds(40,140,90,30);
         b2.setBounds(160,140,90,30);
@@ -48,9 +50,7 @@ public class kmToMeterConverter extends JFrame  implements ActionListener {
         b3.addActionListener(this);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400,400);
-        setLocationRelativeTo(null);
-        setLayout(null);
+        
         setVisible(true);
     }
     @Override
@@ -78,3 +78,4 @@ public class kmToMeterConverter extends JFrame  implements ActionListener {
 
 
 }
+
