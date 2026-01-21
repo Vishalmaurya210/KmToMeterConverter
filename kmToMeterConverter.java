@@ -62,7 +62,8 @@ public class kmToMeterConverter extends JFrame  implements ActionListener {
         t2.setText(String.valueOf(meter));
         }
         catch(NumberFormatException nfe){
-            System.out.println(nfe.getMessage());
+        JOptionPane.showMessageDialog(null, "Please enter digit only!", "Error!", JOptionPane.ERROR_MESSAGE);
+
         }
     }
     if(ae.getSource()==b2){
@@ -83,5 +84,6 @@ public class kmToMeterConverter extends JFrame  implements ActionListener {
 
 
 }
+
 
 
