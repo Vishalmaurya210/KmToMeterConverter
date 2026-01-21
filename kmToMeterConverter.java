@@ -72,7 +72,11 @@ public class kmToMeterConverter extends JFrame  implements ActionListener {
         t1.requestFocus();
     }
     if(ae.getSource()==b3){
+        int reps;
+        reps = JOptionPane.showConfirmDialog(null,"Are you sure you want to quit ?","Quiting",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+    if(reps==JOptionPane.YES_OPTION){
         System.exit(0);
+    }
     }
 
     }
@@ -84,6 +88,7 @@ public class kmToMeterConverter extends JFrame  implements ActionListener {
 
 
 }
+
 
 
 
