@@ -56,9 +56,14 @@ public class kmToMeterConverter extends JFrame  implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae){
     if(ae.getSource()==b1){
+        try{
         double km = Double.parseDouble(t1.getText());
         double meter = km*1000;
         t2.setText(String.valueOf(meter));
+        }
+        catch(NumberFormatException nfe){
+            System.out.println(nfe.getMessage());
+        }
     }
     if(ae.getSource()==b2){
         t1.setText(" ");
@@ -78,4 +83,5 @@ public class kmToMeterConverter extends JFrame  implements ActionListener {
 
 
 }
+
 
